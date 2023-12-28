@@ -159,8 +159,7 @@ sns.heatmap(df.corr(), annot = True, linewidths = 2, linecolor = 'lightgrey')
 plt.show()
 ```
 
-![heatmap](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/29f98256-9c8a-45ba-bc78-cc1e2a737eaf)
-
+![heatmap](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/37ed7ae0-0dca-4ef6-a94f-b304f9dba624)
 
 Selanjutnya kita lihat distribusi data dari tiap-tiap feature
 
@@ -192,7 +191,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![distrib_feature](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/6f707fab-32ac-4c16-bdee-1ccf0c34ab5f)
+![distrib_feature](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/dd9c645c-e330-4574-a9ce-815654233a6b)
 
 
 Disini saya membuat fungsi untuk membuat plot
@@ -210,26 +209,25 @@ def kde(col):
 
 Dapat kita lihat memiliki hipertensi memiliki kemungkinan lebih besar untuk tidak terkena ginjal kronis
 
-![vio_htn](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/05edfd74-01a0-4d88-9cc4-5c283bd5b230)
+![vio_htn](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/a5561248-46c6-4747-b051-f6f188c52ce9)
+
 
 Kadar BU (Blood Urea) tinggi
 memiliki risiko lebih tinggi untuk terkena ginjal kronis
 
-![vio_bu](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/76deefff-77db-424e-bae8-524514f59622)
+![vio_bu](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/a49b2bc7-f975-4271-ac2b-72902362c561)
 
 Berdasarkan grafik dibawah kadar hemogoblin rendah memiliki risiko lebih tinggi untuk mengalami ginjal kronis
 
-![vio_hemo](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/ccaa6d06-18e7-4e0b-a1f6-62e012f8648d)
-
+![vio_hemo](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/0d10dbd3-1219-4de2-b9dd-dcf4b172f8aa)
 
 Berdasarkan plot dibawah dapat disimpulkan dengan kadar Rbcc rendah memiliki risiko lebih tinggi untuk mengalami ginjal kronis
 
-![kde_rbcc](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/ae5271a4-3f28-4ae9-b1de-2ff0b3bd141a)
-
+![kde_rbcc](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/2ab267ed-7a0b-417c-898e-800c20ab5a98)
 
 Berbeda dengan Rbcc, Wbcc tinggi memiliki risiko lebih tinggi untuk mengalami ginjal kronis walaupun tidak terlalu signifikan
 
-![kde_wbcc](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/3f5a6cca-d2d6-4a85-9274-1a79cb6884b8)
+![kde_wbcc](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/f0653e91-57de-4d1d-ae03-997f49255051)
 
 ## Modeling
 
@@ -274,7 +272,8 @@ _ = tree.plot_tree(Dtree,
                    filled=True)
 ```
 
-![tree](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/5c4a4a8c-b324-4c09-84c1-1b976dd8798f)
+![tree](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/e216c7e0-79da-47a7-8462-6c5693e098e9)
+
 
 Model ini memulai dengan memeriksa apakah kadar hemoglobin (Hemo) pasien kurang dari atau sama dengan 12,95. Jika ya, maka model akan memeriksa apakah kadar serum kreatinin (Sc) pasien kurang dari atau sama dengan 1,15. Jika ya, maka model akan memprediksi bahwa pasien menderita gagal ginjal. Jika tidak, maka model akan memprediksi bahwa pasien tidak menderita gagal ginjal.
 
@@ -338,10 +337,11 @@ plt.xlabel('Predicted Label')
 plt.show()
 ```
 
-![matrix](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/102ab466-551b-4ce6-ba8f-c01e4f15cd74)
+![matrix](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/907abd35-79d3-4076-836f-a1e7e4465fa5)
 
 ## Deployment
 
 Web app : [Streamlit](https://prediksi-gagal-ginjal.streamlit.app/)
 
-![deply](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/bc19ae61-5029-4bc6-9577-7e0e1cf44782)
+![deply](https://github.com/adityaeka21/prediksi-ginjal/assets/148531157/005dbf4b-992f-4a81-b48d-7771ae481f19)
+
