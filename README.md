@@ -130,6 +130,8 @@ import warnings
 warnings.simplefilter("ignore")
 ```
 
+### Data Discovery
+
 Membuat data frame dari data csv yang di download tadi
 
 ```py
@@ -148,6 +150,11 @@ Output dibawah kita bisa melihat jumlah data, nilai min, max dan sebagainya dari
 df.describe()
 ```
 
+Dataset ini memiliki 400 baris dan 14 kolom
+
+```py
+df.shape
+```
 ### Visualisasi
 
 Petama mari kita lihat korelasi antar kolom dengan menggunakan heatmap, dapat kita lihat htn memilki korelasi paling tinggi dengan label diantara kolom yang lain
